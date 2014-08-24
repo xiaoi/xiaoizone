@@ -1,0 +1,2920 @@
+1
+00:00:00,000 --> 00:00:05,830
+>> PARLANTE: All right, hey there. Hey, good
+morning. Welcome to the PyQuick Basic Python
+
+2
+00:00:05,830 --> 00:00:12,120
+Class. My name is Nick Parlante and I work
+in Google's engEDU group which deals with
+
+3
+00:00:12,120 --> 00:00:18,220
+sort of technical training in engineering.
+And also I have a job at Stanford where I
+
+4
+00:00:18,220 --> 00:00:22,640
+work as a lecturer. So, the Python today is--or
+rather, it's actually a 2-day class. So this
+
+5
+00:00:22,640 --> 00:00:29,640
+class is about just the basic useful normal
+Python. And Python is sort of--you know, it's
+
+6
+00:00:29,750 --> 00:00:34,480
+a nice friendly learn--and you can actually
+learn a lot of Python in two days. So, that's
+
+7
+00:00:34,480 --> 00:00:38,260
+the good news. This is the class where the
+prerequisite is not--you don't need to be
+
+8
+00:00:38,260 --> 00:00:42,420
+like super-expert engineer to come in here
+and learn Python. What we want is just that
+
+9
+00:00:42,420 --> 00:00:48,460
+you have some experience in some language.
+So, like, yeah, you have some idea what a
+
+10
+00:00:48,460 --> 00:00:52,370
+variable is or something like that. And then,
+and Python's going to meet you halfway on
+
+11
+00:00:52,370 --> 00:00:56,210
+this. Python, like I was saying before, you
+know, it's a nicely designed language. It--a
+
+12
+00:00:56,210 --> 00:01:01,440
+lot of things work pretty easily and so you
+can learn a lot of Python pretty quickly.
+
+13
+00:01:01,440 --> 00:01:06,790
+So, this is a 2-day class. And what's going
+to happen is it'll be a mix of lecture and
+
+14
+00:01:06,790 --> 00:01:12,970
+coding sections. I'll kind of alternate between
+the two. The good news or I guess the bad
+
+15
+00:01:12,970 --> 00:01:18,509
+news or whatever; the news is that the class
+moves pretty quickly. So, I'll show few things
+
+16
+00:01:18,509 --> 00:01:20,750
+in lecture and, you know, kind of demonstrate
+couple of things. And I want to get pretty
+
+17
+00:01:20,750 --> 00:01:25,049
+quickly to you trying that in coding because,
+really, when you code it up, you know, that's
+
+18
+00:01:25,049 --> 00:01:29,740
+when you're going to learn it. So, as I lecture
+through stuff, don't feel like--I don't want
+
+19
+00:01:29,740 --> 00:01:33,250
+you to have the idea like, "Oh,"--where you're
+memorizing or writing down everything that
+
+20
+00:01:33,250 --> 00:01:40,250
+I say. So, [INDISTINCT] few here for a second,
+so there's a--for the PyQuick class, we have
+
+21
+00:01:40,900 --> 00:01:44,979
+a whole set of written materials and here's
+the PyQuick page, it links all of them. And
+
+22
+00:01:44,979 --> 00:01:49,509
+particular today, there's this one PyQuick
+Basics. And that's pretty much what we're
+
+23
+00:01:49,509 --> 00:01:53,270
+going to talk about today. It's pretty long
+and it talks about strings and lists and modules
+
+24
+00:01:53,270 --> 00:01:57,159
+and a bunch of things that I'm going to lecture
+about. So, my goal is in the lecture sections,
+
+25
+00:01:57,159 --> 00:02:00,250
+just kind of pick up the basic idea of what
+I'm showing you. But don't feel like you need
+
+26
+00:02:00,250 --> 00:02:05,299
+to memorize every detail of it. And then later,
+when we're in the lab section, yeah, you can
+
+27
+00:02:05,299 --> 00:02:08,320
+go to the [INDISTINCT] packing it. You can
+go, "Oh, rightly, he said something about
+
+28
+00:02:08,320 --> 00:02:13,520
+strings," you can sort of orient yourself
+a little bit and figure it out how this stuff
+
+29
+00:02:13,520 --> 00:02:17,950
+works. So, there's also--I had, sort of--I
+printed some copies of this Basics thing but
+
+30
+00:02:17,950 --> 00:02:20,319
+then I didn't make quite enough before class
+started, so I'll go get those when we're at
+
+31
+00:02:20,319 --> 00:02:24,819
+the next break so I'll also give you a printed
+dead-tree version of this document for you
+
+32
+00:02:24,819 --> 00:02:31,819
+to get started. Alrighty, so, let's just get
+started. So, Python is a--actually kind of
+
+33
+00:02:33,250 --> 00:02:38,580
+an old language. It was created by a guy name
+Guido van Rossum, who actually works at Google,
+
+34
+00:02:38,580 --> 00:02:42,040
+and it was created in 1990. So, I think about
+it as, like, a little bit old by, you know,
+
+35
+00:02:42,040 --> 00:02:46,330
+hip language standards. However, in the most
+recent years, Python seems to have gotten
+
+36
+00:02:46,330 --> 00:02:49,980
+a lot of momentums. It's becoming pretty popular.
+And I think it stems from--I get it, it's
+
+37
+00:02:49,980 --> 00:02:54,560
+basically a pretty good language. I think
+of Python as being sort of a quick and light
+
+38
+00:02:54,560 --> 00:02:58,489
+language. So, if I have some little tasks,
+some little automation, I just want to just
+
+39
+00:02:58,489 --> 00:03:03,159
+dance, encode and be done. Python seems to
+work very well, like it's very, sort of, frictionless.
+
+40
+00:03:03,159 --> 00:03:08,519
+It's just--quick little things just happen
+very nicely. I think you would categorize
+
+41
+00:03:08,519 --> 00:03:14,080
+Python as a scripting language. So, it's similar
+to maybe Pearl or Bash or Ruby or maybe JavaScript,
+
+42
+00:03:14,080 --> 00:03:19,349
+the whole sort of space of languages that
+don't have a real heavy type system. So, Python
+
+43
+00:03:19,349 --> 00:03:24,959
+is certainly a nice example in there. Python
+as a--I'll show you as we start mess around
+
+44
+00:03:24,959 --> 00:03:29,230
+with Python. Python is good at, sort of, quick
+turnaround. So, you could--if you have an
+
+45
+00:03:29,230 --> 00:03:32,470
+idea, a little experiment you want to run,
+you just type it in and you could just try
+
+46
+00:03:32,470 --> 00:03:36,200
+it immediately. There's not a big compile
+stuff or anything, sort of, slow. So, we're
+
+47
+00:03:36,200 --> 00:03:39,290
+going to--I'm going to encourage you to have
+a development style where you have a, sort
+
+48
+00:03:39,290 --> 00:03:45,519
+of, quick turnaround between editing and running
+and I'll demo that in a minute. So Python
+
+49
+00:03:45,519 --> 00:03:50,010
+is certainly very appropriate for small projects,
+with little bits of animation. Within Google,
+
+50
+00:03:50,010 --> 00:03:55,239
+Python gets used for all sorts of little things
+like that. There is debate about whether or
+
+51
+00:03:55,239 --> 00:03:59,069
+not Python is also good for huge projects,
+since it lacks a big type system--and I'm
+
+52
+00:03:59,069 --> 00:04:02,090
+not going to settle that debate today. But,
+you know, there's certainly advocates for
+
+53
+00:04:02,090 --> 00:04:06,989
+both sides. But, certainly, as you know, Python
+is a wonderful language to learn for solving
+
+54
+00:04:06,989 --> 00:04:13,989
+small encoding problems. Ah, all right. So,
+let me show you--a little bit of Python code
+
+55
+00:04:14,150 --> 00:04:20,470
+here. Let's see. So, Python is an interpretive
+language. So, there's this program called
+
+56
+00:04:20,470 --> 00:04:26,000
+Python. And later on, we're going to write
+Python programs, the Python--this is called
+
+57
+00:04:26,000 --> 00:04:29,570
+the Python interpreter. It's actually going
+to, kind of, do the running for us. So, one
+
+58
+00:04:29,570 --> 00:04:33,949
+of the nice qualities of Python is that you
+can just run the interpreter, so I just type
+
+59
+00:04:33,949 --> 00:04:39,520
+"python" in here. And then, I can just type
+little snippets of codes, just add it and
+
+60
+00:04:39,520 --> 00:04:42,940
+it'll, sort of, compile and run them just
+as we go. And so, this is a marvelous way
+
+61
+00:04:42,940 --> 00:04:47,350
+to sort of see what's going on. So, I can
+just show you some basic Python here. So,
+
+62
+00:04:47,350 --> 00:04:52,190
+I'll assign a variable "a," I'll say, you
+know, "a is 6." And so, what the interpreter
+
+63
+00:04:52,190 --> 00:04:56,139
+does here is what's called the read eval print
+loop. So, I type a little bit of code to it.
+
+64
+00:04:56,139 --> 00:04:59,410
+When I hit return, it's going to evaluate
+it and its going to come back with a prompt.
+
+65
+00:04:59,410 --> 00:05:03,900
+It'll say, "Okay, I know you--now what do
+you want to do?" So if I type "a," just a
+
+66
+00:05:03,900 --> 00:05:08,100
+value, what it does is it evaluates it. In
+some sense, it kind of prints like, "Well,
+
+67
+00:05:08,100 --> 00:05:11,740
+here's, sort of, the ASCII form of that,"
+and then it comes back with a prompt. This
+
+68
+00:05:11,740 --> 00:05:16,220
+is a very standard interpreter sort of thing.
+So, a couple of notes; please notice there.
+
+69
+00:05:16,220 --> 00:05:20,759
+Notice I didn't have to declare that I was
+going to have a variable "a" or that it was
+
+70
+00:05:20,759 --> 00:05:25,699
+going to be an "int," no. Python, it's all
+about quick light. We're just like, get right
+
+71
+00:05:25,699 --> 00:05:30,750
+to it. So, just by assigning to "a" that it
+cause us to exist. Later on, I could say,
+
+72
+00:05:30,750 --> 00:05:36,710
+"Oh, let's have 'a' be the string 'hello,'"
+Well, okay. We're fine. So, there's not a
+
+73
+00:05:36,710 --> 00:05:41,930
+compiled time type that associated with "a."
+Instead, "a" just points to whatever it points
+
+74
+00:05:41,930 --> 00:05:46,120
+to. So right now--so I have to hit "a" here.
+So, yeah, so now it's a string, earlier it
+
+75
+00:05:46,120 --> 00:05:49,780
+wasn't it. Though, with the jolly a little
+bit aligned, the way you can think about in
+
+76
+00:05:49,780 --> 00:05:54,330
+Python is that a value, you know, "a" in this
+case, it points to something and in or a string.
+
+77
+00:05:54,330 --> 00:05:59,060
+And whatever it points to knows what type
+it is. That's stored at runtime. And so, then,
+
+78
+00:05:59,060 --> 00:06:04,569
+as the code runs, it just uses the types of
+the objects as they are at runtime. And we'll
+
+79
+00:06:04,569 --> 00:06:10,870
+certainly see that theme in a lot of the cases.
+Okay, I'll show you just syntax, at least.
+
+80
+00:06:10,870 --> 00:06:14,850
+So, there's a built-in function called Len.
+And so, if I wanted to take the, you know,
+
+81
+00:06:14,850 --> 00:06:18,400
+find the length of that string, I could say,
+"Len of a," and okay, it turns out, that's
+
+82
+00:06:18,400 --> 00:06:25,400
+"5." Also, Python is case sensitive. So, if
+I type an upper case "A" I'm going to get
+
+83
+00:06:26,880 --> 00:06:31,889
+this error. So it says, "nah, blah-blah."
+This bottom part, I think it's almost English,
+
+84
+00:06:31,889 --> 00:06:36,270
+"Name error: name "A" is not defined." Okay,
+well, that's telling you something. So, in
+
+85
+00:06:36,270 --> 00:06:41,240
+Python, if it comes across a variable or some
+other symbol which has not previously been
+
+86
+00:06:41,240 --> 00:06:45,539
+given some value, then that's an error. Then
+there's a little bit in contrast to some languages
+
+87
+00:06:45,539 --> 00:06:49,030
+where if it's undefined, it's like, "Well,
+you know, let's just use the empty string."
+
+88
+00:06:49,030 --> 00:06:53,750
+Or, you know, "Let's just kind of blunder
+ahead." Python is not that way. So, this will
+
+89
+00:06:53,750 --> 00:06:56,580
+also come up like when you go out and bounce
+an array or do some other thing where it's
+
+90
+00:06:56,580 --> 00:07:01,229
+a little bit like it doesn't seem to match
+up, Python will halt. And I think giving you
+
+91
+00:07:01,229 --> 00:07:06,229
+an experience, the Python language is just--since
+the greatest source of delays in your code-working
+
+92
+00:07:06,229 --> 00:07:11,090
+is bugs. And so, it's bad, or if it's been
+found, it's bad if a bug is, sort of, sitting
+
+93
+00:07:11,090 --> 00:07:14,830
+in there, hidden. Really, if there's an error,
+you want to know. And so, Python reflects,
+
+94
+00:07:14,830 --> 00:07:21,830
+or reflects that style. So, let me show--so,
+what's going to happen is we're going to do
+
+95
+00:07:22,050 --> 00:07:27,770
+all sorts of Python. And the interpreter is
+a great source of doing little experiments.
+
+96
+00:07:27,770 --> 00:07:31,660
+So, for example, what's going to happen is
+someone's going to ask me some questions about
+
+97
+00:07:31,660 --> 00:07:35,009
+Python and I'm just not going to know the
+answer. I mean, of course. And--but rather
+
+98
+00:07:35,009 --> 00:07:40,669
+than admit that, what I'm going to say is,
+"Oh, that's an excellent question. Hey, let's
+
+99
+00:07:40,669 --> 00:07:44,460
+try it in the interpreter and see." And in
+that way, I'm never at risk of being wrong,
+
+100
+00:07:44,460 --> 00:07:47,590
+or whatever, it's just going to do whatever
+it is going to do. So, for example, you might
+
+101
+00:07:47,590 --> 00:07:54,190
+wonder, "Oh, well, what if I want to have
+a string and an int together?" So, I'll say,
+
+102
+00:07:54,190 --> 00:08:01,009
+"'Hello' + 6." Now, what does that do? Okay,
+it turns out that doesn't work. I was mentioning
+
+103
+00:08:01,009 --> 00:08:04,669
+the solution, so you're already at "+"--in
+Java that works and some of the--in Python
+
+104
+00:08:04,669 --> 00:08:08,389
+though, "+" between a string and it does not
+automatically convert then it fix it. Oh,
+
+105
+00:08:08,389 --> 00:08:12,419
+in the interpreter, by the way, the "Up arrow"
+works. So it's, sort of, like in Bash, I can,
+
+106
+00:08:12,419 --> 00:08:18,280
+like, flip the previous lines. So it just
+happens, if I call, there's an "str" function.
+
+107
+00:08:18,280 --> 00:08:22,300
+So, if I do "str" on it then "str" on kind
+of anything. Then that makes, or tries to
+
+108
+00:08:22,300 --> 00:08:26,900
+make a string out of it and then the code
+works. I'll talk more about strings and stuff
+
+109
+00:08:26,900 --> 00:08:31,169
+later on. But you can do that yourself, right?
+You can be the interpreter and if you have
+
+110
+00:08:31,169 --> 00:08:35,219
+some questions about, "Oh, what if I do to--do
+the--where?" It's just so quick like, well,
+
+111
+00:08:35,219 --> 00:08:39,130
+just, you know, fire up the interpreter and
+try it out. And so, Python does work. I guess
+
+112
+00:08:39,130 --> 00:08:43,500
+it's in an interactive style. And I'm being
+a little repetitious about this because coming
+
+113
+00:08:43,500 --> 00:08:48,230
+from a Java or C++ background, this feature
+isn't very foreign. So, it's not something
+
+114
+00:08:48,230 --> 00:08:51,830
+you would necessary have an instinct to do.
+But in Python, it works very well. So I will
+
+115
+00:08:51,830 --> 00:08:55,740
+certainly encourage you to go that way. Oh,
+all right. So let me get out this. I'll show
+
+116
+00:08:55,740 --> 00:09:01,010
+you how quit the interpreter; the way I do
+it. What I do is I type the word, "quit,"
+
+117
+00:09:01,010 --> 00:09:07,390
+and it doesn't work. But in the error message,
+it says--"Oh, right, right, Control D." Okay,
+
+118
+00:09:07,390 --> 00:09:13,269
+good. And so then I type 'control'--Oops.
+So, here we go. So, in our in--you know, later
+
+119
+00:09:13,269 --> 00:09:16,339
+on, oh, you don't have to do it now, but later
+on we'll have this PyQuick directory. It's
+
+120
+00:09:16,339 --> 00:09:20,029
+going to have a bunch of exercises for you
+to do. And I'll analyze my selling here. And
+
+121
+00:09:20,029 --> 00:09:26,519
+in particular, I've got this "hello.py" file.
+And so, I'm going to use that as kind of a--just
+
+122
+00:09:26,519 --> 00:09:33,279
+real basic example to start things up. So,
+one of the required, you know, in order to
+
+123
+00:09:33,279 --> 00:09:35,920
+do this class, what you want to do is you're
+going to have a way of editing and running,
+
+124
+00:09:35,920 --> 00:09:38,510
+and switching between those two very quickly.
+And there's a separate handout that talks
+
+125
+00:09:38,510 --> 00:09:41,899
+about that. So, I won't repeat that in lecture.
+In this case, I'm going to have these two
+
+126
+00:09:41,899 --> 00:09:46,950
+windows. So up here, I've got this like, you
+know, whatever, primitive EmEx editor but
+
+127
+00:09:46,950 --> 00:09:50,959
+while I can do editing in that screen and
+then in this screen, I can do running. So,
+
+128
+00:09:50,959 --> 00:09:55,940
+what I'd like to do is, you know, right here
+is a very basic Python program. I'd like to
+
+129
+00:09:55,940 --> 00:10:02,940
+just talk about the parts of this thing. So,
+up here at the very top, you've have this
+
+130
+00:10:03,079 --> 00:10:07,630
+standard user bin, Python, you know, sort
+of, or, you know, number sign--bang! Just
+
+131
+00:10:07,630 --> 00:10:12,140
+talking about what interpreter is going to
+use this. We're going to--today, we're going
+
+132
+00:10:12,140 --> 00:10:17,260
+to use Python 2.4. It's a perfectly modern
+version and this is also the official modern
+
+133
+00:10:17,260 --> 00:10:21,829
+version used here in Google. There's also
+a 2.5 and a 2.6. But those differences are
+
+134
+00:10:21,829 --> 00:10:26,890
+like not real big, so I wouldn't worry about
+those. I would not use Python 2.2 because
+
+135
+00:10:26,890 --> 00:10:33,420
+that at--is actually different. So, 2.4. Go
+with that. Python 3 actually just came out
+
+136
+00:10:33,420 --> 00:10:38,450
+and it does have some real differences; although,
+it's not in wide use yet. Here and there--mostly,
+
+137
+00:10:38,450 --> 00:10:43,290
+we're doing just totally straight-ahead normal
+standard Python. And so, that's not very different
+
+138
+00:10:43,290 --> 00:10:47,240
+in Python 3000--in Python 3. But in a couple
+of places, I may point out things that are
+
+139
+00:10:47,240 --> 00:10:50,430
+going to be over little different in Python
+3. But for the most part, the stuff we're
+
+140
+00:10:50,430 --> 00:10:55,190
+going to do, we'll all come through fine.
+The "-tt" thing, I'll talk about in a second.
+
+141
+00:10:55,190 --> 00:11:02,190
+Okay, let's get rid with this import system.
+There. So, what this says, this is a "def
+
+142
+00:11:04,800 --> 00:11:10,160
+main: print 'Hello.'" That defines a function.
+So, you say, "def" and space and then the
+
+143
+00:11:10,160 --> 00:11:11,170
+name of the thing. Yeah, question?
+>> [INDISTINCT]
+
+144
+00:11:11,170 --> 00:11:18,170
+>> PARLANTE: Oh, I'm sorry. It's coming off
+a bit. Oh, thank you. There we go, all right.
+
+145
+00:11:18,600 --> 00:11:22,740
+So, this is just a simple function definition.
+In this case, I can get whatever name I want.
+
+146
+00:11:22,740 --> 00:11:26,399
+But it's very conventional in Python that
+whatever is going to be, kind of, like the
+
+147
+00:11:26,399 --> 00:11:30,550
+main thing you do, you'll call lower case
+m, "main." In this case, it turns out Python
+
+148
+00:11:30,550 --> 00:11:35,800
+has a print operator. And so, you can say
+"print" and then there's a series of things
+
+149
+00:11:35,800 --> 00:11:40,550
+and separate them with commas and it prints
+them. So, in this case, it just prints out,
+
+150
+00:11:40,550 --> 00:11:47,060
+"Hello." This thing at the bottom is a little
+unfortunate but I'm going to--it's boilerplate
+
+151
+00:11:47,060 --> 00:11:52,500
+syntax. And that is the boilerplate syntax
+to run the "main," that we find above. And
+
+152
+00:11:52,500 --> 00:11:57,450
+I will mention very briefly why this is here.
+But then, you should think of this as just
+
+153
+00:11:57,450 --> 00:11:59,769
+something that's just mechanically you just
+put at the bottom of the file and then don't
+
+154
+00:11:59,769 --> 00:12:05,639
+think about too much. The way this works is
+that a Python program can be--in this case,
+
+155
+00:12:05,639 --> 00:12:10,860
+"Hello.py," you can run it like [INDISTINCT]
+like I want to invoke this program. And in
+
+156
+00:12:10,860 --> 00:12:15,019
+that case, that if statement will be true,
+the way the interpreter sets things up. And
+
+157
+00:12:15,019 --> 00:12:18,399
+so, since it's true then here what does is
+it's calling the main function. So, actually,
+
+158
+00:12:18,399 --> 00:12:24,700
+I can just demonstrate that. So, if I go down
+here to my--same directory, so, the way you
+
+159
+00:12:24,700 --> 00:12:30,200
+run this thing--well, there's two ways, you
+could type "python," the name of the interpreter,
+
+160
+00:12:30,200 --> 00:12:34,959
+and then give it "hello.py," say, "Hey, please
+run that." And then, you could see here it
+
+161
+00:12:34,959 --> 00:12:40,389
+prints, "Hello." So, there's my marvelous
+program functioning. In the Unix way, the
+
+162
+00:12:40,389 --> 00:12:46,010
+more modern thing is that you would--you have
+the XQ bit set--I'll have talk about this
+
+163
+00:12:46,010 --> 00:12:49,620
+a little bit, and so then, you can just say,
+that's the, you know, whatever. "hello.py"
+
+164
+00:12:49,620 --> 00:12:56,620
+and it just runs it. So, either of those techniques
+will work okay. All right. So, in that example,
+
+165
+00:12:57,709 --> 00:13:04,240
+I'm running it and so that then this if statement
+is trying out to be true and so then it runs
+
+166
+00:13:04,240 --> 00:13:08,800
+"main." There is this other way that you can
+load a Python program. Where one Python module
+
+167
+00:13:08,800 --> 00:13:13,329
+wants to load another one and use it essentially
+like a library--which I, actually, am going
+
+168
+00:13:13,329 --> 00:13:19,690
+to demonstrate, I think, tomorrow. And in
+that case, I want to load the Python module,
+
+169
+00:13:19,690 --> 00:13:23,579
+it's sort of synonymous with [INDISTINCT]
+file in Python. I want to load it but I don't
+
+170
+00:13:23,579 --> 00:13:28,630
+want to run it. I just want to have its definitions
+available and so, in that case, this if statement
+
+171
+00:13:28,630 --> 00:13:32,899
+will be false if I load it. And so then, it
+will bring the module in but it won't run
+
+172
+00:13:32,899 --> 00:13:39,310
+its main. So, that's what the if statement
+is for. But for today, we're just always going
+
+173
+00:13:39,310 --> 00:13:43,510
+to run it just like hello.py so you don't
+need to worry about this too much. Okay, so
+
+174
+00:13:43,510 --> 00:13:48,310
+let me show you--I want to, you know, I going
+to add a few features to this thing; and so
+
+175
+00:13:48,310 --> 00:13:53,529
+just to, kind of, show you some things. So
+first thing I'm going to do is, I want to
+
+176
+00:13:53,529 --> 00:13:56,529
+print out the command-line arguments from
+my main here. It's just a very common thing
+
+177
+00:13:56,529 --> 00:14:03,529
+to want to do. And it turns out, there's a
+module called "sys." And the sys module, there's
+
+178
+00:14:06,529 --> 00:14:10,740
+a Python--standard Python thing, it includes
+a lot of, sort of, operating system interface-type
+
+179
+00:14:10,740 --> 00:14:16,180
+stuff. So, you could access command-line arguments
+or you could exit the whole program or whatever.
+
+180
+00:14:16,180 --> 00:14:21,120
+I'll show you how to bring up the documentation
+in a second. In Python, the way that you refer
+
+181
+00:14:21,120 --> 00:14:24,500
+to some external module of stuff you'd like
+to pull in is you have an import statement.
+
+182
+00:14:24,500 --> 00:14:29,310
+You say, "import sys" or import--I'll show
+you a bunch of different ones over the next
+
+183
+00:14:29,310 --> 00:14:34,130
+few days. And then, down here, to refer to
+something inside of the module, you say module
+
+184
+00:14:34,130 --> 00:14:37,680
+name, so "sys" and then dot and then and you'll
+just need to know the name. In this case,
+
+185
+00:14:37,680 --> 00:14:43,490
+it's, "sys.argv," is the name of the command-line
+arguments in that module. So, I'm going to
+
+186
+00:14:43,490 --> 00:14:50,490
+save that and then down here, I'll run, "hello,"
+and I'll just say like "aaa bbb ccc," right?
+
+187
+00:14:50,540 --> 00:14:57,540
+So, those are command-line arguments. So now,
+when I run it, see it prints these out. So
+
+188
+00:14:59,680 --> 00:15:06,680
+that is a Python list. It has four--so Python
+lists have square brackets around them. And
+
+189
+00:15:07,160 --> 00:15:10,970
+we'll mess with this a lot more later on.
+In this case, this list has four elements
+
+190
+00:15:10,970 --> 00:15:14,600
+in it, which is, kind of, the old Unix standard
+way of doing command-line arguments. The first
+
+191
+00:15:14,600 --> 00:15:21,000
+argument, it points to the script itself,
+so that's "./hello.py." And then, the subsequently
+
+192
+00:15:21,000 --> 00:15:28,000
+three elements--these guys here, that's just--Oops!
+These guys then just correspond to the arguments
+
+193
+00:15:29,949 --> 00:15:36,209
+here of that I passed at. So, what I want
+to show you--so, I'm going back to my source
+
+194
+00:15:36,209 --> 00:15:41,110
+code here. So, so far, this part doesn't really
+do anything very useful. But I do want to
+
+195
+00:15:41,110 --> 00:15:44,829
+show you just the idea of a module like, yeah,
+there's--we're going to use modules a lot
+
+196
+00:15:44,829 --> 00:15:48,269
+today. So, that's how we're going to pull
+stuff, you know, you use codec way to write
+
+197
+00:15:48,269 --> 00:15:55,269
+by code of my program. Now, a very reasonable
+question is like, "Oh, 'sys,' like, how am
+
+198
+00:15:56,959 --> 00:16:01,880
+I supposed to know that?" like, "Where did
+that come from?" So, I want to show you two
+
+199
+00:16:01,880 --> 00:16:07,889
+ways that you can, kind of, research what
+a module is and what it has in it. And I'm
+
+200
+00:16:07,889 --> 00:16:13,730
+going to show you two. There's the hi-tech
+way and there's the easy way. And they both
+
+201
+00:16:13,730 --> 00:16:16,649
+work fine. So, you could use either of these
+ways. First of all, I'll show you the hi-tech
+
+202
+00:16:16,649 --> 00:16:23,639
+way. All right, so I'm going to fire up the
+Python interpreter, and actually in the Python
+
+203
+00:16:23,639 --> 00:16:27,959
+interpreter, I can say "import sys." I mean,
+it really kind of looks like a program. It's
+
+204
+00:16:27,959 --> 00:16:34,300
+just that I get to type stuff interactively.
+So then, inside of--there are two functions
+
+205
+00:16:34,300 --> 00:16:41,170
+in here. One is "dir," so I can do a "dir"
+on sys. And what that does is to just, kind
+
+206
+00:16:41,170 --> 00:16:45,120
+of, shows me all the symbols that are defined
+in there. So, it's sort of an homage to dash,
+
+207
+00:16:45,120 --> 00:16:50,959
+I always think of dir. And so, you can see,
+you know, if you didn't know about "argv,"
+
+208
+00:16:50,959 --> 00:16:54,230
+or whatever, you'd say like, "Oh, exit." "Oh,
+that's probably the exit function," and--where's
+
+209
+00:16:54,230 --> 00:16:59,320
+"argv?" Oh, all right. Check it out. There's
+"argv." So this--some of these are data, some
+
+210
+00:16:59,320 --> 00:17:03,970
+of them are codes but you can at least get
+a feel for what's inside of there. So, dir,
+
+211
+00:17:03,970 --> 00:17:10,079
+that's the first one; then there's a companion
+called help. And what help does is it kind
+
+212
+00:17:10,079 --> 00:17:15,819
+of pulls up sort of a JavaDoc, sort of a man
+page documents about like, oh, what is going
+
+213
+00:17:15,819 --> 00:17:21,530
+on with this module? And so, with dir and
+help, you can kind of poke around a little
+
+214
+00:17:21,530 --> 00:17:26,110
+bit and orient yourself. And what's nice--if
+you look at my list here, for example, there's--this
+
+215
+00:17:26,110 --> 00:17:32,169
+is my example, there's exit. So, that's sys
+dot exit that's a function. I can actually
+
+216
+00:17:32,169 --> 00:17:39,169
+say help of sys dot exit, and then it pulls
+up just help about that function. So, just
+
+217
+00:17:39,330 --> 00:17:44,730
+in Python and in lecture or whatever, I will
+say, "Oh, use the Ebola ABC Module," and I'll
+
+218
+00:17:44,730 --> 00:17:47,230
+kind of mention a couple of functions that
+you need to use but I won't give you further
+
+219
+00:17:47,230 --> 00:17:50,590
+direction than that. And so then, what you
+know, which is a very realistic position to
+
+220
+00:17:50,590 --> 00:17:54,730
+be in. And what will happen is that in Python,
+you can use dir and help to kind of dig around
+
+221
+00:17:54,730 --> 00:18:01,730
+and get better docs, or you know, using--using
+this technique. I'll do another example. Remember
+
+222
+00:18:02,150 --> 00:18:08,630
+I talked about the len function earlier? So,
+I could say help of len and that like, gives
+
+223
+00:18:08,630 --> 00:18:12,710
+you like, okay--not pretty scant description
+but a little bit of description about that.
+
+224
+00:18:12,710 --> 00:18:17,190
+One thing I'll point out about this first
+of all, usual--notice why, when I type help
+
+225
+00:18:17,190 --> 00:18:22,809
+len, I'm just typing len without a set of
+parentheses after it? And that's a kind of
+
+226
+00:18:22,809 --> 00:18:29,809
+subtle syntactic distinction. When I say len
+paren hello like that, I'm calling the len
+
+227
+00:18:30,640 --> 00:18:37,230
+function. But when I just say len with no
+parens like that, I'm just referring to the
+
+228
+00:18:37,230 --> 00:18:39,789
+len function. I'm pointing to say, well, here
+is some code. Don't run it, I just want to
+
+229
+00:18:39,789 --> 00:18:46,789
+talk about this code. So, here when I call
+help, notice it's just len and it's just unadorned,
+
+230
+00:18:47,860 --> 00:18:53,370
+all righty? So, let me show you--so that's
+the high-tech way of doing dir and help, certainly
+
+231
+00:18:53,370 --> 00:19:00,110
+very useful. Now, I'll show you the easy way.
+The easy way is you go to your browser and
+
+232
+00:19:00,110 --> 00:19:07,110
+you just go to Google and you just type Python--like
+what did we just do? I'll say Python sys exit
+
+233
+00:19:08,140 --> 00:19:12,610
+and then whatever; Google searches, for whatever
+reason, just work really well with Python.
+
+234
+00:19:12,610 --> 00:19:16,910
+So, like the first couple hits, like yeah,
+it just is the docs for the Python sys exit
+
+235
+00:19:16,910 --> 00:19:23,080
+function or I've been doing a Python--I'll
+show you strings in a second. So, if I say
+
+236
+00:19:23,080 --> 00:19:30,080
+Python string, type that out, oh yeah, first
+hit here. So, Python.org is the official--so,
+
+237
+00:19:30,580 --> 00:19:35,830
+Python, I should mention, is you know open-source
+and all, like good minor stuff. Python.org
+
+238
+00:19:35,830 --> 00:19:40,070
+is sort of the official Python home and so
+if you see a link that's docs.Python.org a
+
+239
+00:19:40,070 --> 00:19:44,850
+lot--you know that--Python.org has excellent
+documentation and tutorials and all sorts
+
+240
+00:19:44,850 --> 00:19:47,770
+of stuff like that. And so, if you get a Google
+search that just kind of points into that
+
+241
+00:19:47,770 --> 00:19:52,450
+a lot of times, so that's going to be nice
+authoritative answer. So, just doing Google
+
+242
+00:19:52,450 --> 00:19:56,660
+actually works amazing alone. I was feel like
+I'm being kind of powerful and hip if I use
+
+243
+00:19:56,660 --> 00:20:01,780
+like, dir and help to dig around, but I must
+admit that in fact, just doing a Google search
+
+244
+00:20:01,780 --> 00:20:06,690
+that, like, any six-year old could do, like,
+in fact, works great. And so, you know, both
+
+245
+00:20:06,690 --> 00:20:11,610
+those techniques are available, you have to
+use whichever one you like, all righty. So,
+
+246
+00:20:11,610 --> 00:20:18,610
+let me show you--let me go back to my--get
+out of here. So, I want to build up the Python
+
+247
+00:20:19,360 --> 00:20:25,390
+code inside of a--inside of this function
+bit, show you couple of things. One thing,
+
+248
+00:20:25,390 --> 00:20:32,390
+I'm going to show you a very common error,
+real quick. So, I'm going to comment out the
+
+249
+00:20:34,890 --> 00:20:39,010
+import sys. So, incidentally the number sign
+is the comment character, so like, and that
+
+250
+00:20:39,010 --> 00:20:43,590
+just goes to the end of the line. So, this
+is a very typical way I would write this code.
+
+251
+00:20:43,590 --> 00:20:49,340
+I'm using sys.argv, but I've forgotten to
+do the import. So, I want to show you what
+
+252
+00:20:49,340 --> 00:20:56,340
+that looks like. So, if I say hello, I get
+an error. So, this is a Python error trace.
+
+253
+00:20:57,510 --> 00:21:03,950
+So, the most interesting part here is maybe
+at the bottom, says, "Global name sys is not
+
+254
+00:21:03,950 --> 00:21:08,240
+defined." Now, the error is not very specific
+here but it's kind of--it doesn't quite know
+
+255
+00:21:08,240 --> 00:21:11,590
+if I wanted to have a variable name sys or
+module, it doesn't know. It just looks like
+
+256
+00:21:11,590 --> 00:21:16,659
+S-Y-S to it, but it is that error like, while
+I came across the symbol and it was not previously
+
+257
+00:21:16,659 --> 00:21:19,470
+defined. So, you could see that that is one
+of the basic rules of Python that if you--if
+
+258
+00:21:19,470 --> 00:21:24,120
+you're going to use a symbol, it previously
+needs to have been given a value. So, when
+
+259
+00:21:24,120 --> 00:21:27,909
+you see something like that and it refers
+to a module that you're trying to use, then
+
+260
+00:21:27,909 --> 00:21:34,530
+what that means is--oh, right, I forgot to
+do the import. So, I go back here, I'll put
+
+261
+00:21:34,530 --> 00:21:39,900
+the import back. So, essentially what the
+import does is it takes the symbol S-Y-S and
+
+262
+00:21:39,900 --> 00:21:44,830
+it binds it to point to something so that
+then down stream, when you say sys dot whatever,
+
+263
+00:21:44,830 --> 00:21:48,750
+it's able to see if it'll actually work. So,
+let's try that much and now work again. Okay
+
+264
+00:21:48,750 --> 00:21:53,669
+good, now we're back to just pitching the
+arguments. All right, so I'd like to do--well,
+
+265
+00:21:53,669 --> 00:22:00,669
+I'll show you how to build a real program
+out of this. So, I'm going to define a hello
+
+266
+00:22:00,980 --> 00:22:05,020
+function that does something. So, I'll say
+hello and then let's say this will take in
+
+267
+00:22:05,020 --> 00:22:12,020
+a string. So, I'm doing a second def here
+and let's say--let's say this is a name, actually.
+
+268
+00:22:17,559 --> 00:22:24,559
+I'll say prints, "hello" and then the print--you
+can actually separate things with commas.
+
+269
+00:22:26,820 --> 00:22:30,120
+So, if I say "hello" name--and you can have
+multiple comments, multiple things in it;
+
+270
+00:22:30,120 --> 00:22:37,120
+it sort of prints those out and puts them
+on a line. So, what I'll do down here actually
+
+271
+00:22:38,390 --> 00:22:45,390
+and when I'm all set, let's have--let's put
+a bunch of exclamation marks after the name.
+
+272
+00:22:48,240 --> 00:22:51,659
+So, that's my little "hello" function that
+has two lines in it and I'll talk about the
+
+273
+00:22:51,659 --> 00:22:55,850
+plus and--you know, I'm glossing over some
+details there, but you can sort of see what
+
+274
+00:22:55,850 --> 00:23:01,360
+it does. And then down here, I'll call my
+"hello" function and what I'm going to do
+
+275
+00:23:01,360 --> 00:23:07,059
+is I'm going to pass in the first command
+line argument. So that was sys.argv and that
+
+276
+00:23:07,059 --> 00:23:14,059
+turns out the zeroth element refers to the
+script itself which is--that's just an ancient
+
+277
+00:23:15,740 --> 00:23:21,860
+convention. So, the element that I really
+care about is sys.argv one there. So, I'm
+
+278
+00:23:21,860 --> 00:23:27,270
+going to save that and I'll see if this works,
+so I'll say, "Hello Alice," and so there,
+
+279
+00:23:27,270 --> 00:23:31,600
+check it out. All right, so now it prints
+"Hello Alice," you can sort of see the results
+
+280
+00:23:31,600 --> 00:23:35,679
+there. All right, so let me talk a little
+bit. I just want to use this as a vehicle
+
+281
+00:23:35,679 --> 00:23:42,080
+to kind of talk about what's going on syntactically
+with Python. So, I'll sort of o through this
+
+282
+00:23:42,080 --> 00:23:46,760
+top to bottom. So, I give this thing an argument
+called name. Notice just like--just as with
+
+283
+00:23:46,760 --> 00:23:51,390
+the variables, I didn't have to declare that
+this was a string or an ant or anything like
+
+284
+00:23:51,390 --> 00:23:55,080
+that. I just say well, whatever; it's just
+called name and it just points to whatever
+
+285
+00:23:55,080 --> 00:24:00,020
+it points to. So, arguments and variables
+are similar, they're both just names that
+
+286
+00:24:00,020 --> 00:24:05,130
+point to some value. Then, in Python when
+you want set off a block of code, it very
+
+287
+00:24:05,130 --> 00:24:09,010
+often uses the colon, as you see here. So,
+I'm going to say define this function and
+
+288
+00:24:09,010 --> 00:24:12,190
+there's a colon. Now, I'm going to go to the
+next line and I'm going to have, you know,
+
+289
+00:24:12,190 --> 00:24:17,779
+how are many lines of code I want to have.
+Now, this brings us to Python's most sort
+
+290
+00:24:17,779 --> 00:24:24,779
+of famous syntactic feature which is that
+Python does not have any sort--any left curly
+
+291
+00:24:25,950 --> 00:24:32,950
+brace, right curly brace notion to enclose
+a block of code, instead, Python uses indentation.
+
+292
+00:24:33,919 --> 00:24:37,809
+So, notice under the def here--so the Google
+standard is to indent by two spaces, and so
+
+293
+00:24:37,809 --> 00:24:42,970
+that's a fine thing to do for today. So under
+the def, this first line is indented by two
+
+294
+00:24:42,970 --> 00:24:47,100
+and this next line is indented by two. So,
+that's what's putting them inside of that
+
+295
+00:24:47,100 --> 00:24:51,820
+function and there just isn't a left curly
+brace or right curly brace I typed to put
+
+296
+00:24:51,820 --> 00:24:56,620
+those in there. So, this is--it's a little
+bit controversial. I'll just give you my take
+
+297
+00:24:56,620 --> 00:25:02,039
+on it. I think the idea is that if we were
+writing this in Java--I'll disturb all the
+
+298
+00:25:02,039 --> 00:25:05,510
+real Python people here, you know. I don't
+know. Suppose it looked like this ... sounds
+
+299
+00:25:05,510 --> 00:25:11,240
+really funny, all right. Suppose we had that,
+right? We're blocking out the code that makes
+
+300
+00:25:11,240 --> 00:25:16,520
+this function and what we would've indented--like
+we would've had one set of brain cells that
+
+301
+00:25:16,520 --> 00:25:20,570
+was managing the curly bracers and putting
+them in right. But then, we also would've
+
+302
+00:25:20,570 --> 00:25:23,789
+indented correctly, right? And we were raised
+right and it looks terrible. So, of course,
+
+303
+00:25:23,789 --> 00:25:25,919
+we would've indented correctly as well; that
+would've been a second set of brain cells,
+
+304
+00:25:25,919 --> 00:25:29,830
+those. So, we would've maintaining these two
+things kind of in parallel. But if you start
+
+305
+00:25:29,830 --> 00:25:33,500
+to think about it, those two bits of syntax
+would've been reflecting the same piece of
+
+306
+00:25:33,500 --> 00:25:37,140
+information; they always would've moved in
+tandem. And so, the Python idea is like you
+
+307
+00:25:37,140 --> 00:25:40,850
+know, having two bits of syntax that represent
+the same thing and then we're just trying
+
+308
+00:25:40,850 --> 00:25:45,760
+to keep them in sync is dumb. Like, we want
+to just do the quickest, most minimal, clean
+
+309
+00:25:45,760 --> 00:25:48,950
+thing and that's kind what Python looks like,
+and so it's like, you know what? Let's just
+
+310
+00:25:48,950 --> 00:25:53,799
+get rid of the curly braces. If the--if we
+want to look right--so I'll put the colon
+
+311
+00:25:53,799 --> 00:25:59,440
+back there--let's just have the indentation
+define how the blocks of code go. I'll fill
+
+312
+00:25:59,440 --> 00:26:03,400
+this--this function have to be little longer
+so you'd get a better feel for what indentation
+
+313
+00:26:03,400 --> 00:26:08,270
+looks like. My advice about this is that it
+seems extremely foreign, weird and slightly
+
+314
+00:26:08,270 --> 00:26:13,110
+wrong for about the first 11 minutes that
+you use it. And then, it's just fine. I mean,
+
+315
+00:26:13,110 --> 00:26:17,400
+it's just basically very logical and reason
+why--it's kind of visual and so, it very quickly
+
+316
+00:26:17,400 --> 00:26:22,330
+just seems normal. So I encourage you just
+not worry about it. All right, so let me--I
+
+317
+00:26:22,330 --> 00:26:24,620
+want to make this function a little longer;
+then allow me to demonstrate the indentation
+
+318
+00:26:24,620 --> 00:26:30,240
+a little more. Yeah, question?
+>> It has space between hello and Alice [INDISTINCT].
+
+319
+00:26:30,240 --> 00:26:33,640
+>> PARLANTE: Oh, so yeah, the question is,
+where does the space come? That's a quality
+
+320
+00:26:33,640 --> 00:26:37,929
+of print that when you separate things with
+a comma, it puts a single space between them.
+
+321
+00:26:37,929 --> 00:26:43,360
+If I wanted to bunch those together, I could've
+done a plus. The plus in string space just
+
+322
+00:26:43,360 --> 00:26:48,919
+crams them together, so that would've done
+it. All right, so, let me show you--so, I
+
+323
+00:26:48,919 --> 00:26:55,059
+want to make this a little fancier here. I'm
+going to put in an If statement. So, let's
+
+324
+00:26:55,059 --> 00:26:59,950
+see. I'll say if--let's say, if name and I
+know I'll just end up showing you how Boolean
+
+325
+00:26:59,950 --> 00:27:06,950
+this stuff work. If name is, let's say, Alice,
+then we'll say--I'm just going to--this won't
+
+326
+00:27:09,809 --> 00:27:16,809
+be very meaningful. Here, we'll add some question
+marks on there. So the--I'll just start at
+
+327
+00:27:18,779 --> 00:27:23,740
+the top here. So, this is what an If statement
+looks like. You say if and then you have the
+
+328
+00:27:23,740 --> 00:27:28,140
+test and then there's a colon and then it
+has whatever--block of statements underneath
+
+329
+00:27:28,140 --> 00:27:33,730
+it. Now, just to get with this idea of indentation,
+if I wanted to also do multiple things, I
+
+330
+00:27:33,730 --> 00:27:39,510
+could say you know, you know, I'd consider,
+you know, "Alert: Alice Mode" here or something.
+
+331
+00:27:39,510 --> 00:27:43,919
+The fact that those two lines, the print alert
+and these two lines are underneath the If,
+
+332
+00:27:43,919 --> 00:27:47,340
+that's what's putting them, you know, under
+the control of that if statement. And then
+
+333
+00:27:47,340 --> 00:27:52,440
+here, when this line is indented back to Alt
+that--that's what putting me outside the If
+
+334
+00:27:52,440 --> 00:27:55,529
+statement. So, this is what it means to say
+that the indentation is significant, right?
+
+335
+00:27:55,529 --> 00:28:01,000
+Where something is placed left-right does
+control what the code means and so that's
+
+336
+00:28:01,000 --> 00:28:04,930
+the foreign part. All right, so let's start
+about this If statement. Here, I'm using 
+
+337
+00:28:04,930 --> 00:28:11,539
+"= =." "= =" does sort of an intuitive deep
+comparison. In some languages, you kind of
+
+338
+00:28:11,539 --> 00:28:16,120
+have to worry, well, is this a point of comparison
+or whatever? In Python, you do not to have
+
+339
+00:28:16,120 --> 00:28:20,140
+that worry. "= =" does what I have described
+as a kind of a real comparison. It takes the
+
+340
+00:28:20,140 --> 00:28:23,419
+thing on the left, the thing in the right
+and it really fleshes them out and compares
+
+341
+00:28:23,419 --> 00:28:27,090
+them. So, it works for integers, it works
+for strings; later on, I'll show you it works
+
+342
+00:28:27,090 --> 00:28:31,299
+for entire lists. So, you could have relatively
+big data structures and just compare them
+
+343
+00:28:31,299 --> 00:28:38,299
+with "= =" and you'd still get a reasonable
+result. In C++ or Java, you always got to
+
+344
+00:28:40,870 --> 00:28:47,659
+have the parentheses around the test. In Python,
+the parentheses are not required. And then,
+
+345
+00:28:47,659 --> 00:28:52,200
+so it's regarded as the best Python style
+to not put them in. It's a little bit like--it's
+
+346
+00:28:52,200 --> 00:28:56,039
+like speaking with your sort of vulgar accent.
+Like if you put the parens in, then everyone's
+
+347
+00:28:56,039 --> 00:29:01,039
+like, "Oh, I see. One of you is, you know,
+C++ refugees." So, you could sort of show
+
+348
+00:29:01,039 --> 00:29:07,429
+off your modernity by, like, not putting in
+it. If you want to have a logical connective,
+
+349
+00:29:07,429 --> 00:29:13,020
+this is a little bit strange. The logical
+connectives are spelled out with letters.
+
+350
+00:29:13,020 --> 00:29:20,020
+So, or is O-R and is A-N-D and not is--it's
+a little hard to say in English--not isn't
+
+351
+00:29:21,830 --> 00:29:28,830
+the thing above the one on the keyboard, its
+N-O-T. So, I'll say, you know, if name is,
+
+352
+00:29:30,309 --> 00:29:37,309
+you know, Nick. So, finally, I'll put a--I'll
+put an else in here just to show off. So I'll
+
+353
+00:29:38,460 --> 00:29:45,460
+say else colon--what do we do in the else
+case? I'll print "Else." Okay. So, now you
+
+354
+00:29:51,230 --> 00:29:53,440
+that--you could sort of see the indentation
+and you're really working here and we've got
+
+355
+00:29:53,440 --> 00:30:00,140
+this kind of modest Python program. All those
+mentioned, you know, all the regular Boolean
+
+356
+00:30:00,140 --> 00:30:03,360
+stuff. You know, there's less than and equal
+equal and, you know, all the kind of regular
+
+357
+00:30:03,360 --> 00:30:09,399
+Boolean stuff works in Python as it does in
+other languages. There are Boolean true and
+
+358
+00:30:09,399 --> 00:30:16,399
+false values, although those aren't used very
+often. The rule in Python is that if you have
+
+359
+00:30:17,549 --> 00:30:22,929
+appointed (ph) or something, there's a few
+kind of null values that count as false. So,
+
+360
+00:30:22,929 --> 00:30:27,080
+if a number is zero that counts as false.
+If a string is the empty string that counts
+
+361
+00:30:27,080 --> 00:30:32,720
+as false and any other value or, you know,
+and the--or if the string is not empty or
+
+362
+00:30:32,720 --> 00:30:37,450
+if a number is not zero, then those count
+as true. So, that's similar to how other languages
+
+363
+00:30:37,450 --> 00:30:41,350
+do it. All right, so let me just try running
+this a little bit. So, I guess if I run this
+
+364
+00:30:41,350 --> 00:30:47,669
+and I say "Hello Alice," then my If statement
+kicks in, so I get all those question marks
+
+365
+00:30:47,669 --> 00:30:51,950
+and then the line below kicks in and I go--oh,
+it's pretty doofy, pretty doofy looking out,
+
+366
+00:30:51,950 --> 00:30:58,950
+but hey, at least it works. So, I'm going
+to show you--I'm going to make a very sweeping
+
+367
+00:30:59,029 --> 00:31:05,630
+claim about how Python works. Python does
+everything at the last possible second. So,
+
+368
+00:31:05,630 --> 00:31:11,769
+in C++ or Java, it takes your code and it
+compiles and it checks it in a million different
+
+369
+00:31:11,769 --> 00:31:15,190
+ways and you might get a lot of different
+compile errors, and then only after all that
+
+370
+00:31:15,190 --> 00:31:21,169
+compile checking, then it runs it. That's
+not how Python works. When you feed your Python
+
+371
+00:31:21,169 --> 00:31:26,279
+code like my hello.py in the Python, it just
+looks at it in the most superficial way, it
+
+372
+00:31:26,279 --> 00:31:32,570
+checks pretty much nothing; it just starts
+running it. And each line it gets to, it evaluates
+
+373
+00:31:32,570 --> 00:31:37,029
+at that line kind of in the moment. So, in
+the moment, it looks at what those variables
+
+374
+00:31:37,029 --> 00:31:41,210
+point to and oh, he's got a string and an
+ant here and it just tries to do it just at
+
+375
+00:31:41,210 --> 00:31:45,159
+the last possible second. And only at that
+second does it notice if there's an error,
+
+376
+00:31:45,159 --> 00:31:48,929
+maybe a variable is not defined or you're
+calling a function that doesn't exist or you
+
+377
+00:31:48,929 --> 00:31:53,039
+know, dividing by zero--I mean, we're always,
+you know, aware of bugs. So, to highlight
+
+378
+00:31:53,039 --> 00:32:00,039
+that, I want to try calling a function here.
+I'm going to call a function called DoesNotExist.
+
+379
+00:32:01,529 --> 00:32:07,450
+Here, I'll pass in a name. Now, there is no
+such function. I haven't defined it, there's
+
+380
+00:32:07,450 --> 00:32:14,350
+not a built in code DoesNotExist, it's just
+wrong, all right? That else is just incorrect.
+
+381
+00:32:14,350 --> 00:32:19,919
+This does demonstrate a deep quality of Python.
+Now, if I call hello.py and pass Alice, you
+
+382
+00:32:19,919 --> 00:32:26,750
+know what? It's going to work fine. All right,
+this is what I mean. What happens is Python
+
+383
+00:32:26,750 --> 00:32:33,559
+only checks a line when it runs that line,
+all right? And so, because it just kind of
+
+384
+00:32:33,559 --> 00:32:39,330
+never hit this else, whatever, it just kind
+of never knows that that was wrong. Now, in
+
+385
+00:32:39,330 --> 00:32:43,830
+the great, you know--as we understand the
+universe, you don't get something for nothing.
+
+386
+00:32:43,830 --> 00:32:47,789
+Well, in Python it means there's not a big
+barrier between you and just, like, your code
+
+387
+00:32:47,789 --> 00:32:53,860
+running. And that can be a real virtue in
+a lot of cases. But also, you're giving up
+
+388
+00:32:53,860 --> 00:32:59,750
+a certain amount of checking that some languages
+might have done. This also means that in a
+
+389
+00:32:59,750 --> 00:33:04,269
+more industrial sense, because Python doesn't
+really check a lot at a compel time, for industrial
+
+390
+00:33:04,269 --> 00:33:08,019
+code, it's more important for it have to have
+good units test coverage. Like you actually
+
+391
+00:33:08,019 --> 00:33:12,350
+need to have run all the lines to see that
+they're correct. Now, for our two days, we're
+
+392
+00:33:12,350 --> 00:33:15,480
+going to work on things that are just kind
+of medium sized little utilities where, you
+
+393
+00:33:15,480 --> 00:33:18,919
+know, if they're incorrect, you can see pretty
+clearly and so for that kind of problem Python
+
+394
+00:33:18,919 --> 00:33:25,320
+is really a good match. All righty. So, let
+me show you--I think I'm going to go back
+
+395
+00:33:25,320 --> 00:33:30,559
+to the Python interpreter here. And I've showed
+you--I've sort of used strings and lists and
+
+396
+00:33:30,559 --> 00:33:33,299
+a few things informally, but I never really
+explained them, so I want to kind of slowdown
+
+397
+00:33:33,299 --> 00:33:38,510
+a little bit here and actually talk about
+how some of these things work. So, the Python
+
+398
+00:33:38,510 --> 00:33:45,510
+string-type is enclosed in quotes. So, there's
+like this string "hello" I've been done. You
+
+399
+00:33:48,340 --> 00:33:55,340
+can also actually put the string in double
+quotes or--here I'll do a different one. Isn't--oops--that
+
+400
+00:33:56,429 --> 00:34:01,169
+works the same. There's not a deep semantic
+difference you could--it's just your choice,
+
+401
+00:34:01,169 --> 00:34:06,399
+you can either use single quotes or double
+quotes. The one difference is that inside
+
+402
+00:34:06,399 --> 00:34:10,599
+of a double quoted string, as I have here,
+you can put a single quote like isn't there
+
+403
+00:34:10,599 --> 00:34:15,649
+and it just, just works. And, likewise, if
+I'd use single quotes, on the outside, I could
+
+404
+00:34:15,649 --> 00:34:22,369
+put a double quote inside. There's not a real
+strong preference. You can kind of use which
+
+405
+00:34:22,369 --> 00:34:26,500
+the one you prefer. I tend to use the single
+quote one. It's just, it looks a little Python
+
+406
+00:34:26,500 --> 00:34:29,500
+to me. Yeah, question.
+>> What kind string that you want include
+
+407
+00:34:29,500 --> 00:34:32,589
+single and double quotes?
+>> PARLANTE: Ah, in fairness to your question,
+
+408
+00:34:32,589 --> 00:34:36,060
+so if want to--so let's say I'll do a double
+quoted one and I want to put a double quote
+
+409
+00:34:36,060 --> 00:34:42,579
+inside of it. So say like--I--what would you
+say, I'd say like--I--what you do is you put
+
+410
+00:34:42,579 --> 00:34:48,010
+a back quote, a back taken from it. So I'd
+say, "I love this exercise," yeah, that's
+
+411
+00:34:48,010 --> 00:34:54,839
+fine. Well, alternately, I could have done
+it, and set some quotes. All right. So, I
+
+412
+00:34:54,839 --> 00:35:01,839
+should you--let's see what's a--isn't. So
+I showed you the "len." Oops. The "len" function
+
+413
+00:35:03,339 --> 00:35:10,339
+earlier. So strings also––as I think I've
+already done, they--the plus works. So if
+
+414
+00:35:11,420 --> 00:35:18,420
+I'd say "a + you know yay" then that puts
+it together, you know, plus put strings together
+
+415
+00:35:18,530 --> 00:35:25,530
+to make a bigger string. Strings in Python
+are what is called immutable and that means
+
+416
+00:35:26,599 --> 00:35:31,280
+that once the string is created it never changes.
+It's like a little read only thing. That's
+
+417
+00:35:31,280 --> 00:35:34,200
+a pretty modern style that turns out to be
+pretty popular in a lot of languages. So for
+
+418
+00:35:34,200 --> 00:35:39,160
+an example when I did that little plus there,
+if I look at the original "a" it's unchanged.
+
+419
+00:35:39,160 --> 00:35:45,369
+All right, the--so whenever anything you do
+with strings, lowercase, uppercase, I'm gonna
+
+420
+00:35:45,369 --> 00:35:50,510
+show you a few things. It's always creating
+new strings to sort of show you the result,
+
+421
+00:35:50,510 --> 00:35:56,599
+but the original string it's always left unchanged.
+So, well, maybe I'll do is I'll set "a" to
+
+422
+00:35:56,599 --> 00:36:03,599
+let's say uppercase "hello." Now it turns
+out there are a bunch of built-in string what
+
+423
+00:36:05,400 --> 00:36:10,630
+are called methods and I'll show you one now.
+So for example there's one called "lower"
+
+424
+00:36:10,630 --> 00:36:16,730
+and what that does is it makes the lowercase
+version of a string. Now the reason this is
+
+425
+00:36:16,730 --> 00:36:21,790
+called a method and this is basic object oriented
+programming just as a--you know there's some--a
+
+426
+00:36:21,790 --> 00:36:26,760
+few things that are very easy and that's we're
+going to work on for the next couple of days.
+
+427
+00:36:26,760 --> 00:36:30,890
+"A" this is, it points to the string, all
+right, I could think of a string object and
+
+428
+00:36:30,890 --> 00:36:36,570
+with this syntax where I say pointer to a
+thing dot and them the name of the method
+
+429
+00:36:36,570 --> 00:36:42,390
+I want to run. What that means is run that
+method on that object. So if I had "b" is
+
+430
+00:36:42,390 --> 00:36:49,390
+equal to like "yay," so if I say "b.lower"
+okay, well, it runs on that string. Whereas
+
+431
+00:36:49,670 --> 00:36:53,260
+when I'd say "a.lower" then it ran on "a,"
+so that's basic, it's, it's, it doesn't, it's
+
+432
+00:36:53,260 --> 00:36:57,619
+a different syntax for running a piece of
+code called the method on an object and that's
+
+433
+00:36:57,619 --> 00:37:03,170
+you know hopefully pretty--that's done pretty
+intuitively. So, what I was saying before
+
+434
+00:37:03,170 --> 00:37:07,839
+is that strings are immutable, they are never
+changed. So for example, if I look at the
+
+435
+00:37:07,839 --> 00:37:13,980
+original--so here, I'll do it again. If I
+say "a.lower" that's not changing "a" that's
+
+436
+00:37:13,980 --> 00:37:20,390
+returning to me a new string that's the lowercase
+version I wanted. d if I look at the original
+
+437
+00:37:20,390 --> 00:37:27,390
+"a, it's unchanged. Now Python has--there
+are many built-in string methods. I showed
+
+438
+00:37:30,280 --> 00:37:37,280
+you lower. I can show you--there's like a
+find, just for example. So if I say "a.find
+
+439
+00:37:38,869 --> 00:37:45,320
+of "e" and what that does is it searches in
+the string for the first occurrence of that
+
+440
+00:37:45,320 --> 00:37:51,680
+and then returns to me in the index. Now in
+reality, there are probably dozens of built-in
+
+441
+00:37:51,680 --> 00:37:54,790
+string methods and I'm not gonna demo them
+all in lecture. I just want you to know that
+
+442
+00:37:54,790 --> 00:37:58,349
+there are a lot of built-in ones and either
+you could look at the Python (ph) where it
+
+443
+00:37:58,349 --> 00:38:03,570
+talks about some of the common ones, or you
+could type, you know, in Google, type, Python
+
+444
+00:38:03,570 --> 00:38:09,369
+string, or maybe Python string method and
+go to the page where it list them all. One
+
+445
+00:38:09,369 --> 00:38:12,849
+of the theme--you know one of the reasons
+that software is a lot more productive than
+
+446
+00:38:12,849 --> 00:38:18,150
+it was say 15 years ago is that we've gotten
+better at having what I think sort of built-in
+
+447
+00:38:18,150 --> 00:38:22,349
+codes. Like a code you didn't write that,
+but that you can call and it just solves basic
+
+448
+00:38:22,349 --> 00:38:27,690
+problems for you, sort of code reuse, and
+Python like any modern language actually has
+
+449
+00:38:27,690 --> 00:38:32,540
+a lot of code already done for you. And so
+one of the basic skills--I think it's kind
+
+450
+00:38:32,540 --> 00:38:37,140
+of living higher on the food chain is when
+you're solving a problem, you don't necessarily
+
+451
+00:38:37,140 --> 00:38:40,890
+like, "Oh, now I'm gonna manually ride a loop
+to solve that." Very often your first instinct
+
+452
+00:38:40,890 --> 00:38:44,119
+is to find the module and dig around a little
+bit to find some code that somebody else already
+
+453
+00:38:44,119 --> 00:38:48,160
+wrote, it's already done and you're going
+to build your solution on top of that. That
+
+454
+00:38:48,160 --> 00:38:51,210
+is, that's a sort of good modern technique
+and it's an excellent Python technique. Python
+
+455
+00:38:51,210 --> 00:38:53,790
+has a lot of built-in stuff and you know over
+the cost of few days, I will certainly point
+
+456
+00:38:53,790 --> 00:39:00,790
+you where a lot of that code list. All right.
+So, I haven't talked about how to look inside
+
+457
+00:39:01,800 --> 00:39:07,770
+of a string. It turns out you can use a square
+brackets to look inside of a string. So if
+
+458
+00:39:07,770 --> 00:39:14,770
+I'd say, "a [0]" that's the left most character
+in "a [1]" that's the "e" and so on. If I
+
+459
+00:39:17,300 --> 00:39:24,079
+go out of bounds here then that's an error,
+so I really need to adjust you know keep within
+
+460
+00:39:24,079 --> 00:39:31,079
+the bounds of the actual thing. So one last--some
+text--I'll show you for this--this is a little
+
+461
+00:39:32,140 --> 00:39:37,660
+less--so you can use the plus to put together.
+You know if I wanted to have a string and
+
+462
+00:39:37,660 --> 00:39:43,119
+whatever, I could use the plus to put together.
+There's another form that uses seized print-up
+
+463
+00:39:43,119 --> 00:39:49,650
+syntax where I could say like "hi % s" and
+the "% s" is a place holder where I'd like
+
+464
+00:39:49,650 --> 00:39:56,510
+a string to go and I could say like, "I have"
+you know "% d donuts" and so that's, that's
+
+465
+00:39:56,510 --> 00:40:00,500
+called a format string and it a sort of--it's
+a good way of mixing in. You have this outer
+
+466
+00:40:00,500 --> 00:40:05,030
+skeleton and you want to sort of substitute
+in a few things and so then you use the "%"
+
+467
+00:40:05,030 --> 00:40:12,030
+ sign and then you combine it with what you
+want. So here I'll say, "Alice and 42." And
+
+468
+00:40:17,349 --> 00:40:21,060
+so using this sort of "%" construct, you can
+have a string in sort of substitute values
+
+469
+00:40:21,060 --> 00:40:25,349
+into it into make a bigger string. Does not
+it really ever required, you could always
+
+470
+00:40:25,349 --> 00:40:30,440
+have gotten that result using plus to kind
+of put the string together but, it's fairly
+
+471
+00:40:30,440 --> 00:40:33,930
+common to use this so I'll just, I'll just
+mention it. The last thing I'll say about
+
+472
+00:40:33,930 --> 00:40:40,420
+strings is that, the strings that I'm showing
+you right here these are Unicode strings.
+
+473
+00:40:40,420 --> 00:40:45,349
+Python's Unicode treatment has been like a
+little uneven and particular in Python 3 it
+
+474
+00:40:45,349 --> 00:40:49,990
+changed a little bit, it got better. So for
+here I just want you to realize like, yeah,
+
+475
+00:40:49,990 --> 00:40:54,930
+these are not Python strings. These are not
+Unicode strings but--and in the handout talks
+
+476
+00:40:54,930 --> 00:40:59,670
+about there's a slightly difference route
+by which you create Unicode string. But once
+
+477
+00:40:59,670 --> 00:41:04,240
+you've got a Unicode string then all the things
+I showed you still work. The square brackets,
+
+478
+00:41:04,240 --> 00:41:08,880
+the "len", the ".lower," all that kind of
+stuff, it's the same interface is just you
+
+479
+00:41:08,880 --> 00:41:12,910
+created or so in a different way. And so,
+I will--but for our purposes this will work.
+
+480
+00:41:12,910 --> 00:41:17,819
+These strings essentially are just serious
+and bites, it's just a (buck) of bites. All
+
+481
+00:41:17,819 --> 00:41:23,170
+right. So that's almost--I'm going to show
+there. So, I want to, I want to show you this
+
+482
+00:41:23,170 --> 00:41:29,069
+one--how are we do on time? Oh, excellent.
+I want to show this last string feature and
+
+483
+00:41:29,069 --> 00:41:36,069
+I want to block out time for our first exercise.
+So, in order to show you this, I'm going to
+
+484
+00:41:36,900 --> 00:41:43,900
+go to the py quick basics document. I want
+to--very high tech here. I'm going to attempt
+
+485
+00:41:45,700 --> 00:41:50,430
+to--here we go. It's just possible. I'm going
+to try and show the interpreter in a little
+
+486
+00:41:50,430 --> 00:41:57,430
+bit of art that I put in there to end up.
+Okay, oh, perfect. All right. So here, I'll
+
+487
+00:41:58,760 --> 00:42:05,140
+say, "a = hello," so I've got the same string.
+So, in that little piece of art, all I've
+
+488
+00:42:05,140 --> 00:42:10,750
+done is I've drawn in the index numbers, so
+like all the languages in Python, the things
+
+489
+00:42:10,750 --> 00:42:15,210
+are--if I want a number and when your sequence
+of things, they are numbered from zero, starting
+
+490
+00:42:15,210 --> 00:42:22,020
+at the left. So, if I'd say--if I refer to
+"a [0]" that's the "h"--this is how I should
+
+491
+00:42:22,020 --> 00:42:27,500
+have done it for or "a [1]" that's the "e."
+Or if I say, "What's the len of this thing?"
+
+492
+00:42:27,500 --> 00:42:34,500
+that's "5," so that just sort of conventional
+indexing into something. Now Python has a
+
+493
+00:42:35,619 --> 00:42:42,490
+syntax for referring to not just a single
+element in a string like this but a kind of
+
+494
+00:42:42,490 --> 00:42:49,490
+subpart of it, and this syntax is gonna use
+the colon. So the way this is going to work
+
+495
+00:42:50,780 --> 00:42:54,560
+is if I say "a" and I'll put the square bracket
+but I'm going to put a colon in the middle
+
+496
+00:42:54,560 --> 00:42:59,619
+here, and I'm going to refer--I'm going to
+indicate both the start and the end. So, for
+
+497
+00:42:59,619 --> 00:43:04,839
+example, if I'd say, "What, what?" I want
+you to start at one; so that's the first index
+
+498
+00:43:04,839 --> 00:43:10,569
+number and then the second number--yeah, it's
+going to say, it's going to go up to but not
+
+499
+00:43:10,569 --> 00:43:17,569
+including that one. In Python, this is called
+a slice. So if I'd say "a [1:3]" that's the
+
+500
+00:43:18,470 --> 00:43:25,470
+subpart of the string starting at the one
+and going up to but not including the three.
+
+501
+00:43:25,790 --> 00:43:31,619
+This is called--it's only entitled called
+the slice. There's a--the word Pythonic is
+
+502
+00:43:31,619 --> 00:43:37,770
+not a word I just made up, it's a real one,
+in the nerdoroty (ph), and this is a very
+
+503
+00:43:37,770 --> 00:43:44,589
+Pythonic feature. Python likes having syntaxes
+which are sort of very short but crisp but
+
+504
+00:43:44,589 --> 00:43:49,220
+then again you know it express something that
+a common thing that you might want to do.
+
+505
+00:43:49,220 --> 00:43:56,220
+So, if I wanted to--if I wanted to say, "Hello,"
+I guess, I could say, what is it, a one--oops,
+
+506
+00:43:58,329 --> 00:44:05,290
+"a [1:5]." That's a little weird. The five
+is kind of one out of bounds there but, actually,
+
+507
+00:44:05,290 --> 00:44:12,290
+what you could do in the slice syntax is if
+you omit the second, the thing after the colon,
+
+508
+00:44:12,319 --> 00:44:17,920
+it just goes all the way through the end of
+the string. And, if you omit the first one,
+
+509
+00:44:17,920 --> 00:44:22,579
+it starts at the beginning. So actually it
+is a truism that if I'd just say square bracket,
+
+510
+00:44:22,579 --> 00:44:27,829
+colon square bracket, well, I just get the
+whole of whatever it was. So this is a very
+
+511
+00:44:27,829 --> 00:44:33,849
+heavy syntax. For say, for example, if I want
+to, you know, remove the first level--level--letter.
+
+512
+00:44:33,849 --> 00:44:38,890
+I could just say one colon (ph) so like instead
+of starting at zero, start at one and then
+
+513
+00:44:38,890 --> 00:44:45,890
+just go through the end. So that's, so far
+that's like pretty neat. But now, just a little
+
+514
+00:44:46,619 --> 00:44:53,619
+bit of scrolling, I'd show you the slightly
+other crazy thing it does. So, thus far, I've
+
+515
+00:44:55,220 --> 00:45:02,220
+just used the positive numbers, but in Python,
+they also added a second set of numbers that
+
+516
+00:45:04,910 --> 00:45:08,540
+also index into the strings. So it's just
+using the negative numbers and the negative
+
+517
+00:45:08,540 --> 00:45:14,800
+numbers instead of starting at the left, they
+start at the right. So minus one refers to
+
+518
+00:45:14,800 --> 00:45:19,589
+the rightmost character and minus two refers
+to the next one and the minus three and so
+
+519
+00:45:19,589 --> 00:45:24,050
+on. You can think of essentially as there's
+an implicit len there that--the minus one
+
+520
+00:45:24,050 --> 00:45:29,180
+essentially saying len minus one, right. So
+len in this case is five. Len minus one is
+
+521
+00:45:29,180 --> 00:45:35,480
+four. I'll check it out for you. So do you
+have written a code in a zero based system
+
+522
+00:45:35,480 --> 00:45:38,589
+but it means that referring to things that
+happen to be at the left is very convenient
+
+523
+00:45:38,589 --> 00:45:41,400
+because like zero, one, two, you always know
+where you are. But then referring to things
+
+524
+00:45:41,400 --> 00:45:45,579
+at the right is like a pain because you always
+have to add len and subtract something. So
+
+525
+00:45:45,579 --> 00:45:50,170
+the negative numbers scheme just also makes
+it convenient to refer to things on the right
+
+526
+00:45:50,170 --> 00:45:57,170
+hand side, and they work in slices too. So,
+for example, how about I say that I want to
+
+527
+00:45:59,930 --> 00:46:05,760
+omit--first, I'll just do my earlier example.
+So I could say what is it? "[-4:-2]"--oops.
+
+528
+00:46:05,760 --> 00:46:12,760
+I'll put the "a" there. That's exactly equivalent
+to the one where earlier it was a one colon
+
+529
+00:46:16,829 --> 00:46:22,099
+three, right. The minus four is just another
+way of saying that. I'm going to get a more
+
+530
+00:46:22,099 --> 00:46:27,760
+realistic example. Say for example, I wanted
+to omit the last three characters of the string.
+
+531
+00:46:27,760 --> 00:46:32,589
+I didn't know how long it was. I could just
+write that as colon minus three. All right,
+
+532
+00:46:32,589 --> 00:46:37,660
+that it's going to go up to but not included.
+I know minus three is the third in. So like
+
+533
+00:46:37,660 --> 00:46:42,550
+I could "he" or I could do a getaway. What
+if I only want the last three characters of
+
+534
+00:46:42,550 --> 00:46:49,550
+a string? I guess right that is minus three
+colon. So, it just--I think, syntactically,
+
+535
+00:46:50,530 --> 00:46:54,970
+this is maybe it looks a little bit weird
+but I found--the slice syntax, I find it--it's
+
+536
+00:46:54,970 --> 00:47:00,270
+just useful in a lot of situations. So I would
+encourage you to go ahead and actually learn
+
+537
+00:47:00,270 --> 00:47:05,660
+this one and we're going to have all these
+exercises and stuff in a little bit. Certainly,
+
+538
+00:47:05,660 --> 00:47:11,430
+I have hidden inside of their little opportunities
+for you to end up going to use the slice syntax.
+
+539
+00:47:11,430 --> 00:47:18,430
+So that is a nice one to get the stuff going.
+Okay, so that actually concludes the first
+
+540
+00:47:18,700 --> 00:47:25,700
+lecture section. So what I would like you
+to do is pull up the exercises and so if you
+
+541
+00:47:27,750 --> 00:47:34,750
+go to the py quick page--just do it here--it
+points to this page, py quick exercises, here
+
+542
+00:47:37,790 --> 00:47:43,300
+you go. And then that explains how you copy
+and I--if you could raise your hand, I'm happy
+
+543
+00:47:43,300 --> 00:47:49,270
+to kind of walk on. How you can copy--this
+is--said directory, direct, directories. It's
+
+544
+00:47:49,270 --> 00:47:53,220
+going to look like this and let me--now, let
+me show what I want you to do. So inside here,
+
+545
+00:47:53,220 --> 00:47:58,220
+there's like day one, day two, and some other
+stuff. Today, we're doing day one. So go in
+
+546
+00:47:58,220 --> 00:48:05,220
+the day one directory, and the first thing
+I want you to look at is there's this, there's
+
+547
+00:48:05,710 --> 00:48:10,770
+a file there called--oops, no, not that one.
+There's a file there called "string1.py" and
+
+548
+00:48:10,770 --> 00:48:17,770
+I'm just going to look inside of there. A
+so what this thing has--is in the comments--sorry,
+
+549
+00:48:20,660 --> 00:48:25,920
+I'll make this a little bigger. There are
+some little exercises in here that just use
+
+550
+00:48:25,920 --> 00:48:30,240
+the stuff in lecture that we've done so far.
+So, for example, here's, you know, exercise
+
+551
+00:48:30,240 --> 00:48:35,130
+"A: Dr. Evil" and just in English, there's
+a little description of like what it is I
+
+552
+00:48:35,130 --> 00:48:40,710
+want you to do and it gives a little example
+but then the code it just not done. And so
+
+553
+00:48:40,710 --> 00:48:45,650
+your job is fill in the code there to actually
+compute what it's suppose to compute; there's
+
+554
+00:48:45,650 --> 00:48:52,349
+a few of these things. And then at the bottom,
+I have filled in little bits of test code.
+
+555
+00:48:52,349 --> 00:48:54,599
+And so you see that you don't have to touch
+that, that's already done. They're just going
+
+556
+00:48:54,599 --> 00:48:56,670
+to call the functions above and just kind
+of check that they were trying the right thing.
+
+557
+00:48:56,670 --> 00:49:03,670
+So it's kind of a primitive form of unit testing.
+So if I run this thing right now, what it
+
+558
+00:49:04,200 --> 00:49:09,660
+does is they all fail, because yeah, there
+is no code and so what's gonna happen is as
+
+559
+00:49:09,660 --> 00:49:14,020
+you fill those bits of function in then somebody's
+pass--this discussion start passing. You can
+
+560
+00:49:14,020 --> 00:49:18,750
+just run it each time to just very quickly
+just get feedback about how it's going. So
+
+561
+00:49:18,750 --> 00:49:25,750
+that is string one, I'd like everyone to do
+string one. If you are just so fast, you get
+
+562
+00:49:26,760 --> 00:49:33,059
+a little bored, there's also a string two.
+In string two, it just contains more. And
+
+563
+00:49:33,059 --> 00:49:35,069
+so, optionally, if we you have more time to
+kill, I'd be happy for you to go ahead and
+
+564
+00:49:35,069 --> 00:49:41,859
+do that. The last thing I need to point out
+here--let's see, I'll just look at string
+
+565
+00:49:41,859 --> 00:49:48,859
+one here. There's a thing I mentioned earlier
+that I never explained. This "-tt" flag. What
+
+566
+00:49:52,040 --> 00:49:58,770
+that refers to is in a Python file, what I
+would recommend is you just always indent
+
+567
+00:49:58,770 --> 00:50:03,079
+with spaces and that that is the Google standard,
+just always indent with spaces and you're
+
+568
+00:50:03,079 --> 00:50:06,970
+okay. But, in your editor, maybe by habit
+or whatever you might accidentally hit the
+
+569
+00:50:06,970 --> 00:50:11,780
+tab key, and if you have a Python file that
+has a mixture where it uses and spaces in
+
+570
+00:50:11,780 --> 00:50:18,200
+some places, in tabs and other places that
+is deeply confusing, because visually where
+
+571
+00:50:18,200 --> 00:50:23,900
+the codes appears to vertically appears to
+a line may not correspond to how it really
+
+572
+00:50:23,900 --> 00:50:27,900
+aligns as far as Python is concerned. So what
+the "-tt" flag does is if it ever finds a
+
+573
+00:50:27,900 --> 00:50:32,930
+mixture of spaces and tabs, it just immediately
+halts, which is for--when you're on your first
+
+574
+00:50:32,930 --> 00:50:36,309
+day of Python programming that's absolutely
+what you want. So this will help you find
+
+575
+00:50:36,309 --> 00:50:39,809
+the case where you want to do is the [INDISTINCT]
+I've talked about. You want to set your editor
+
+576
+00:50:39,809 --> 00:50:45,349
+so that if you ever hit the tab key, it understands
+to just put in spaces. So put the "-tt" flag
+
+577
+00:50:45,349 --> 00:50:50,990
+will protect you if, if you end up with--make
+a mistake with that. Oh, all right so here's
+
+578
+00:50:50,990 --> 00:50:56,740
+what I'd like to do, it's now, it's about
+10:50, so I'm going to imagine; I want you
+
+579
+00:50:56,740 --> 00:51:01,520
+to work on this with me maybe about half hour
+for that, so that's--what I'd like you to
+
+580
+00:51:01,520 --> 00:51:08,520
+do is then go have lunch. So what I'd like
+you to do is be back in here--I'll have do
+
+581
+00:51:12,270 --> 00:51:17,970
+all the math here. Back in here at 1:15 and
+so I'm going to leave you some time for doing
+
+582
+00:51:17,970 --> 00:51:21,770
+Python coding and then some time for having
+for having lunch. You, it allows you to bounce
+
+583
+00:51:21,770 --> 00:51:24,980
+something and of course, you know, I'm in
+here to answer questions or whatever during
+
+584
+00:51:24,980 --> 00:51:28,039
+that whole time. All right. So, so please
+go ahead and get started with that.
+
